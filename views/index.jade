@@ -1,0 +1,45 @@
+extends layout
+
+block header
+  header(class='page-header')
+    h1= title
+      span(class='label label-info')= 'Alpha'
+
+block error
+  div(id='invalidDate' class='alert alert-danger' role='alert')
+    strong= 'Invalid date! '
+    | Date should be in range from <strong>12/16/2006</strong> to <strong>11/26/2010</strong>
+
+block content
+  section(class='panel panel-success')
+    div(class='panel-heading')= 'Please choose start date'
+    div(class='panel-body')
+      div(class='controls')
+      div(class='input-group')
+        input(id='date-picker-1' type='text' class='ate-picker form-control')
+        label( for='date-picker-1' class='input-group-addon btn')
+          span(class='glyphicon glyphicon-calendar')
+
+  section(class='panel panel-warning')
+    div(class='panel-heading')= 'Please choose end date'
+    div(class='panel-body')
+      div(class='controls')
+      div(class='input-group')
+        input(id='date-picker-2' type='text' class='ate-picker form-control')
+        label( for='date-picker-2' class='input-group-addon btn')
+          span(class='glyphicon glyphicon-calendar')
+
+  section.btnCalcul
+    a(class="btn btn-lg btn-success" role="button" id='calcul')= 'Calculate'
+
+block load
+  div(id='load')
+    img(src='/images/Preloader_2.gif')
+
+block chart
+  section.chart
+    div(id='chart')
+
+block footer
+   hr
+   span(style='color: rgba(220,220,220,1)')= 'Copyright Olha Todorashko 2015'

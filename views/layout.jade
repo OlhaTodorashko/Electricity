@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/datepicker.css')
+    link(rel='stylesheet', href='/stylesheets/vis.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.css')
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/vis/3.8.0/vis.min.js')
+    script(src='/javascripts/bootstrap-datepicker.js')
+
+    script(src='/javascripts/script.js')
+
+  body
+    div(class='container')
+      block header
+      block error
+      block content
+      block load
+      block chart
+      block footer

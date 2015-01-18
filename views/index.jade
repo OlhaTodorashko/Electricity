@@ -11,8 +11,9 @@ block error
     | Date should be in range from <strong>12/16/2006</strong> to <strong>11/26/2010</strong>
 
 block content
-  section(class='panel panel-success')
-    div(class='panel-heading')= 'Please choose start date'
+  div(class='panel panel-success')
+    div(class='panel-heading')
+      | Please choose start date (greater than <strong>12/16/2006</strong>)
     div(class='panel-body')
       div(class='controls')
       div(class='input-group')
@@ -20,8 +21,9 @@ block content
         label( for='date-picker-1' class='input-group-addon btn')
           span(class='glyphicon glyphicon-calendar')
 
-  section(class='panel panel-warning')
-    div(class='panel-heading')= 'Please choose end date'
+  div(class='panel panel-warning')
+    div(class='panel-heading')
+      | Please choose end date (less than <strong>11/26/2010</strong>)
     div(class='panel-body')
       div(class='controls')
       div(class='input-group')
@@ -29,7 +31,7 @@ block content
         label( for='date-picker-2' class='input-group-addon btn')
           span(class='glyphicon glyphicon-calendar')
 
-  section.btnCalcul
+  div.btnCalcul
     a(class="btn btn-lg btn-success" role="button" id='calcul')= 'Calculate'
 
 block load
